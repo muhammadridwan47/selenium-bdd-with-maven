@@ -37,6 +37,12 @@ More for information: https://www.youtube.com/watch?v=DtSYzJtjfXQ
   ```
    mvn test  
   ``` 
+  OR specific by tag
+  ```
+    mvn test -D cucumber.filter.tags="@ui"
+  ``` 
+  
+
 
 
 
