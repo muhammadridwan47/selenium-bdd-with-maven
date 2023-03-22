@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-22T13:22:58 WIB" name="All Test Suite" finished-at="2023-03-22T13:23:08 WIB" duration-ms="9264">
+  <suite started-at="2023-03-22T15:14:04 WIB" name="All Test Suite" finished-at="2023-03-22T15:14:21 WIB" duration-ms="16731">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@247d8ae]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-03-22T13:22:58 WIB" name="/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium" finished-at="2023-03-22T13:23:08 WIB" duration-ms="9264">
+    <test started-at="2023-03-22T15:14:04 WIB" name="/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium" finished-at="2023-03-22T15:14:21 WIB" duration-ms="16731">
       <class name="Runners.Run">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runners.Run@247d8ae]" started-at="2023-03-22T13:22:58 WIB" name="setUpClass" finished-at="2023-03-22T13:22:59 WIB" duration-ms="207" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runners.Run@247d8ae]" started-at="2023-03-22T15:14:04 WIB" name="setUpClass" finished-at="2023-03-22T15:14:04 WIB" duration-ms="232" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@247d8ae]" started-at="2023-03-22T13:22:59 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-22T13:23:08 WIB" duration-ms="9019" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@247d8ae]" started-at="2023-03-22T15:14:04 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-22T15:14:14 WIB" duration-ms="9123" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.Run@247d8ae]" started-at="2023-03-22T13:23:08 WIB" name="tearDownClass" finished-at="2023-03-22T13:23:08 WIB" duration-ms="10" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@247d8ae]" started-at="2023-03-22T15:14:14 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-22T15:14:21 WIB" duration-ms="7337" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User should be able to login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Web login]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.Run@247d8ae]" started-at="2023-03-22T15:14:21 WIB" name="tearDownClass" finished-at="2023-03-22T15:14:21 WIB" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

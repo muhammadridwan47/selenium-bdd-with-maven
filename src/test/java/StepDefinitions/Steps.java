@@ -16,24 +16,30 @@ public class Steps {
     public void the_user_is_on_login_page() {
         driver.get("http://barru.pythonanywhere.com/daftar");
     }
-    @When("the user enters valid credentials")
-    public void the_user_enters_valid_credentials() {
-        driver.findElement(By.xpath("/html/body/div/div[2]/form/input[1]")).sendKeys("tester@jagoqa.com"); // input email
-        driver.findElement(By.cssSelector("input#password")).sendKeys("testerjago"); // input password
+
+
+    @When("the user enters email {string}")
+    public void the_user_enters_email(String username) {
+        driver.findElement(By.xpath("/html/body/div/div[2]/form/input[1]")).sendKeys(username); // input email
     }
+    @When("the user enters password {string}")
+    public void the_user_enters_password(String password) {
+        driver.findElement(By.cssSelector("input#password")).sendKeys(password); // input password
+    }
+
     @When("hits submit")
     public void hits_submit() {
         driver.findElement(By.id("signin_login")).click(); // click the button
     }
-    @Then("the user should be logged in successfully")
-    public void the_user_should_be_logged_in_successfully() {
+    @Then("the user should be logged in successfully {string}")
+    public void the_user_should_be_logged_in_successfully(String name) {
         try {
             // validation
             TimeUnit.SECONDS.sleep(2);
             String notificationTitle = driver.findElement(By.id("swal2-title")).getText();
             String notificationMessage = driver.findElement(By.id("swal2-content")).getText();
             //expectation
-            Assert.assertTrue(notificationTitle.equals("Welcome tester jago"));
+            Assert.assertTrue(notificationTitle.equals("Welcome " + name));
             Assert.assertTrue(notificationMessage.equals("Anda Berhasil Login"));
             TimeUnit.SECONDS.sleep(2); // this using tryCatch handle
             driver.quit();
