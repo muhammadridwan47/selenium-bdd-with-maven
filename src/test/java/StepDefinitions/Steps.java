@@ -1,5 +1,9 @@
 package StepDefinitions;
 
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -10,8 +14,41 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.concurrent.TimeUnit;
 
 public class Steps {
-    ChromeOptions options = new ChromeOptions();
-    WebDriver driver = new ChromeDriver(options.addArguments("--remote-allow-origins=*"));
+    WebDriver driver;
+
+
+    // LifeCycle Testing
+    @Before //before Scenario
+    public void setup() {
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options.addArguments("--remote-allow-origins=*"));
+        System.out.println("Hello setup");
+    }
+
+    @After //After Scenario
+    public void teardown(){
+        System.out.println("Hello After");
+        driver.quit();
+    }
+
+    @BeforeStep() //before (when, given, And then) will be executed
+    public void setupStep() {
+        System.out.println("BeforeStep");
+    }
+
+    @AfterStep //after (when, given, And then) will be executed
+    public void teardownStep(){
+        System.out.println("AfterStep");
+    }
+
+    // LifeCycle Testing with Tags execution
+    @Before("@ui") //before Scenario
+    public void setupWithTags() {
+        System.out.println("@Before(\"@ui\")");
+    }
+
+
+
     @Given("the user is on login page")
     public void the_user_is_on_login_page() {
         driver.get("http://barru.pythonanywhere.com/daftar");
@@ -36,7 +73,7 @@ public class Steps {
             Assert.assertTrue(notificationTitle.equals("Welcome tester jago"));
             Assert.assertTrue(notificationMessage.equals("Anda Berhasil Login"));
             TimeUnit.SECONDS.sleep(2); // this using tryCatch handle
-            driver.quit();
+            // driver.quit();
         }
         catch (InterruptedException | Error e) {
             if(e instanceof Error) System.out.println(((Error) e).getMessage());
@@ -70,7 +107,7 @@ public class Steps {
     }
     @When("the user should be logged in unsuccessfully")
     public void the_user_should_be_logged_in_unsuccessfully() {
-        driver.quit();
+       // driver.quit();
     }
 
 
@@ -78,6 +115,6 @@ public class Steps {
     public void the_company_logo_should_be_present_in_the_login_form() {
         String component = driver.findElement(By.xpath("/html/body/div/div[2]/form/h1")).getText();
         Assert.assertTrue(component.equals("Sign in"));
-        driver.quit();
+        // driver.quit();
     }
 }
