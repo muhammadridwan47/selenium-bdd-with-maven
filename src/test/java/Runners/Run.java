@@ -5,7 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/firstTest.feature",
-        glue = {"StepDefinitions"}
+        glue = {"StepDefinitions"},
+        tags = "@functional and @regression" // support run by logic (and, or, not) ex: @functional and @regression
 )
 public class Run  extends AbstractTestNGCucumberTests {
 

@@ -44,4 +44,40 @@ public class Steps {
         }
     }
 
+
+    @When("the user enters invalid credentials")
+    public void the_user_enters_invalid_credentials() {
+        driver.findElement(By.xpath("/html/body/div/div[2]/form/input[1]")).sendKeys("invalid@email.com"); // input email
+        driver.findElement(By.cssSelector("input#password")).sendKeys("invalipassword"); // input password
+    }
+
+
+    @When("an invalid credentials error message should be displayed to the user")
+    public void an_invalid_credentials_error_message_should_be_displayed_to_the_user() {
+        try {
+            // validation
+            TimeUnit.SECONDS.sleep(2);
+            String notificationTitle = driver.findElement(By.id("swal2-title")).getText();
+            String notificationMessage = driver.findElement(By.id("swal2-content")).getText();
+            //expectation
+            Assert.assertTrue(notificationTitle.equals("User's not found"));
+            Assert.assertTrue(notificationMessage.equals("Email atau Password Anda Salah"));
+            TimeUnit.SECONDS.sleep(2);
+        }
+        catch (InterruptedException  e) {
+            if(e instanceof InterruptedException) System.err.format("IOException: %s%n", e);
+        }
+    }
+    @When("the user should be logged in unsuccessfully")
+    public void the_user_should_be_logged_in_unsuccessfully() {
+        driver.quit();
+    }
+
+
+    @Then("the company logo should be present in the login form")
+    public void the_company_logo_should_be_present_in_the_login_form() {
+        String component = driver.findElement(By.xpath("/html/body/div/div[2]/form/h1")).getText();
+        Assert.assertTrue(component.equals("Sign in"));
+        driver.quit();
+    }
 }
