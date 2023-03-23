@@ -13,10 +13,9 @@ public class Steps {
 
     @Before
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "linuxchromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
-        driver = new ChromeDriver(options);
+         driver = new ChromeDriver(options.addArguments("--remote-allow-origins=*"));
     }
 
 
