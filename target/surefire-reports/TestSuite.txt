@@ -1,10 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.028 s <<< FAILURE! - in TestSuite
-Runners.Run.runScenario["User should be able to login with valid credentials", "Optional[Web login]"](1)  Time elapsed: 4.105 s  <<< FAILURE!
-org.openqa.selenium.remote.http.ConnectionFailedException: 
-Unable to establish websocket connection to http://localhost:51992/devtools/browser/6829bf46-cd2c-4c51-8d12-1708211264aa
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.048 s <<< FAILURE! - in TestSuite
+Runners.Run.runScenario["User should be able to login with valid credentials", "Optional[Web login]"](1)  Time elapsed: 3.371 s  <<< FAILURE!
+io.github.bonigarcia.wdm.config.WebDriverManagerException: There was an error creating WebDriver object for Chrome
+Caused by: java.lang.reflect.InvocationTargetException
+Caused by: org.openqa.selenium.remote.http.ConnectionFailedException: 
+Unable to establish websocket connection to http://localhost:52188/devtools/browser/3c8e1b90-9129-46fc-8d07-42b0a95cb831
 Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.1', java.version: '11.0.13'
 Driver info: driver.version: ChromeDriver

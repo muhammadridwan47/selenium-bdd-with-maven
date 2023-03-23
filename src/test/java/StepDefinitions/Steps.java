@@ -9,13 +9,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Steps {
     WebDriver driver;
 
-    WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker()
-            .enableVnc().enableRecording();
 
     // LifeCycle Testing
     @Before //before Scenario
     public void setup() {
-        driver = wdm.create();
+        driver = WebDriverManager.chromedriver().create();
 //        WebDriverManager.chromedriver().setup();
 //        ChromeOptions options = new ChromeOptions();
 //        driver = new ChromeDriver(options.addArguments("--remote-allow-origins=*"));
@@ -26,12 +24,12 @@ public class Steps {
     @After //After Scenario
     public void teardown(){
         System.out.println("Hello After");
-        wdm.quit();
+        driver.quit();
     }
 
     @Given("the user is on login page")
     public void the_user_is_on_login_page() {
-//        driver.get("https://www.facebook.com/");
+        driver.get("https://www.facebook.com/");
       System.out.println("the_user_is_on_login_page");
     }
     @When("the user enters valid credentials")
