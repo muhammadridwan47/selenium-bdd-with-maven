@@ -13,10 +13,6 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
          
-    <build>
-        <defaultGoal>package</defaultGoal>
-    </build>
-
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
@@ -45,6 +41,7 @@
     </dependencies>
 
     <build>
+        <defaultGoal>package</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
