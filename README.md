@@ -2,42 +2,57 @@
     Automation selenium BDD with maven
 </h1>
 
-<p>1. Create project: </p>
+<p>1. Download plugin : </p>
+     - Maven Integration plugin <br/>
+     - Cucumber reports
+     
+     
+  
+<p>2. configuration maven </p>
+     - Go to Manage jenkins
+    
+   ![Screenshot 2023-03-23 at 21 41 39](https://user-images.githubusercontent.com/69374541/227238928-e27c5f47-84e6-45e3-af82-f0d50f3f2ab4.png)
+   ![Screenshot 2023-03-23 at 22 21 18](https://user-images.githubusercontent.com/69374541/227250930-60021c42-f1ea-4e45-ad45-fdfa657299b4.png)
 
-  ![Screenshot 2023-03-22 at 13 51 22](https://user-images.githubusercontent.com/69374541/226824370-b835d0cd-8f7d-4377-a287-4af8f83f8131.png)
-  ![Screenshot 2023-03-22 at 13 52 08](https://user-images.githubusercontent.com/69374541/226824506-5e8ca097-3322-4bce-bb8f-03686e3c43f5.png)
-  ![Screenshot 2023-03-22 at 13 52 51](https://user-images.githubusercontent.com/69374541/226824638-ed71a04f-43b6-497b-9f7d-91d926e346f4.png)
-  
- <br />
-<p>2. Configuration library/dependency: </p>
-  - https://mvnrepository.com/artifact/io.cucumber/cucumber-java/6.10.4
-  <br />
-  - https://mvnrepository.com/artifact/io.cucumber/cucumber-testng/6.10.4
-  <br />
-  - https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.8.1
-  <br />
-  
-  ![Screenshot 2023-03-22 at 13 57 56](https://user-images.githubusercontent.com/69374541/226825567-29003f27-060b-4f68-b593-093473f0e827.png)
-  
-<p>3. Install plugin to support this project: </p>
-  - Create TestNg XML  <br />
-  - Cucumber for Java <br />
-  - Gherkin <br />
-  
-![Screenshot 2023-03-22 at 14 03 23](https://user-images.githubusercontent.com/69374541/226826504-135e9310-e626-4b3c-9f30-eb6ca5229fd8.png)
+   - Go to Manage jenkins
+        
+        
+![Screenshot 2023-03-23 at 21 43 33](https://user-images.githubusercontent.com/69374541/227239531-358bcc4b-1e34-4741-80c5-68807d60d2de.png)
 
 
-<br />
-More for information: https://www.youtube.com/watch?v=DtSYzJtjfXQ
+   - Edit configuration
 
-  <br />
-  
- <p>Run this testing:</p>
+![Screenshot 2023-03-23 at 21 45 01](https://user-images.githubusercontent.com/69374541/227239949-033bd03f-4704-403f-8b60-013e17f41e8a.png)
+
+
+<p>3. Create new job </p>
+  - Click new Item<br/>
+    
+ ![Screenshot 2023-03-23 at 21 46 55](https://user-images.githubusercontent.com/69374541/227240536-18a94c8a-e476-4d45-a70d-3c16f806851d.png)
  
-  ```
-   mvn test  
-  ``` 
+ 
+  - Create The job by input name of job and select  Freestyle project Or Maven project<br/>
+![Screenshot 2023-03-23 at 21 48 53](https://user-images.githubusercontent.com/69374541/227241151-6abfdf0f-8fe7-43db-b527-5741a850e74a.png)
 
 
+  - Configuration <br/>
+![Screenshot 2023-03-23 at 21 56 20](https://user-images.githubusercontent.com/69374541/227243449-18b4451c-ce95-46ec-9d16-e939271056e2.png)
 
 
+![Screenshot 2023-03-23 at 21 58 33](https://user-images.githubusercontent.com/69374541/227244086-9e05cc91-9d6d-4f93-8166-64a8b182844c.png)
+
+note: 
+ - this configuration only with plugin cucumber: -Dcucumber.plugin="json:target/cucumber-report.json"
+ 
+ 
+Configuration auto build job every commit:
+ 
+![Screenshot 2023-03-23 at 22 18 46](https://user-images.githubusercontent.com/69374541/227250117-30cb8b7f-fcd1-4aed-ac6e-dabefff59afe.png)
+
+
+![Screenshot 2023-03-23 at 22 21 51](https://user-images.githubusercontent.com/69374541/227251096-876384a5-a6bc-4e87-a24e-e880db675063.png)
+
+- get the Payload URL
+    - download Ngrok: https://ngrok.com/
+    - type in ur terminal: ngrok http 8080 // port jenkins runs in terminal <br />
+![Screenshot 2023-03-23 at 22 26 34](https://user-images.githubusercontent.com/69374541/227252543-642322eb-25f0-456d-bfa7-6def917f165f.png)
