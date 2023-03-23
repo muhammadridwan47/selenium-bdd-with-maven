@@ -3,31 +3,23 @@ package StepDefinitions;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Steps {
-    WebDriver driver;
 
 
     @Before
     public void setup() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-         driver = new ChromeDriver(options.addArguments("--remote-allow-origins=*"));
+        System.out.println("Hello Before");
     }
 
 
     @After //After Scenario
     public void teardown(){
         System.out.println("Hello After");
-        driver.quit();
     }
 
     @Given("the user is on login page")
     public void the_user_is_on_login_page() {
-      driver.get("https://www.facebook.com/");
       System.out.println("the_user_is_on_login_page");
     }
     @When("the user enters valid credentials")
