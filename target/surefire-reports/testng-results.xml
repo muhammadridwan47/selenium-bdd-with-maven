@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-23T19:03:36 WIB" name="All Test Suite" finished-at="2023-03-23T19:03:42 WIB" duration-ms="5238">
+  <suite started-at="2023-03-23T19:23:47 WIB" name="All Test Suite" finished-at="2023-03-23T19:23:51 WIB" duration-ms="4429">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@247d8ae]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@3c73951]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-03-23T19:03:36 WIB" name="/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium" finished-at="2023-03-23T19:03:42 WIB" duration-ms="5238">
+    <test started-at="2023-03-23T19:23:47 WIB" name="/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium" finished-at="2023-03-23T19:23:51 WIB" duration-ms="4429">
       <class name="Runners.Run">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runners.Run@247d8ae]" started-at="2023-03-23T19:03:36 WIB" name="setUpClass" finished-at="2023-03-23T19:03:37 WIB" duration-ms="305" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runners.Run@3c73951]" started-at="2023-03-23T19:23:47 WIB" name="setUpClass" finished-at="2023-03-23T19:23:47 WIB" duration-ms="304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@247d8ae]" started-at="2023-03-23T19:03:37 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-23T19:03:41 WIB" duration-ms="4885" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@3c73951]" started-at="2023-03-23T19:23:47 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-23T19:23:51 WIB" duration-ms="4076" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -27,10 +27,35 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.remote.http.ConnectionFailedException">
+            <message>
+              <![CDATA[Unable to establish websocket connection to http://localhost:51992/devtools/browser/6829bf46-cd2c-4c51-8d12-1708211264aa
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.1', java.version: '11.0.13'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:51992/devtools/browser/6829bf46-cd2c-4c51-8d12-1708211264aa
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.1', java.version: '11.0.13'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
+at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+at java.base/java.util.Optional.map(Optional.java:265)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:50)
+at StepDefinitions.Steps.setup(Steps.java:20)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.http.ConnectionFailedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.Run@247d8ae]" started-at="2023-03-23T19:03:41 WIB" name="tearDownClass" finished-at="2023-03-23T19:03:41 WIB" duration-ms="18" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.Run@3c73951]" started-at="2023-03-23T19:23:51 WIB" name="tearDownClass" finished-at="2023-03-23T19:23:51 WIB" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

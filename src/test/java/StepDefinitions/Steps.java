@@ -6,22 +6,29 @@ import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Steps {
     WebDriver driver;
 
+    WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker()
+            .enableVnc().enableRecording();
+
     // LifeCycle Testing
     @Before //before Scenario
     public void setup() {
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options.addArguments("--remote-allow-origins=*"));
+        driver = wdm.create();
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+//        driver = new ChromeDriver(options.addArguments("--remote-allow-origins=*"));
+//        driver = new ChromeDriver();
         System.out.println("Hello setup");
     }
 
     @After //After Scenario
     public void teardown(){
         System.out.println("Hello After");
-        driver.quit();
+        wdm.quit();
     }
 
     @Given("the user is on login page")

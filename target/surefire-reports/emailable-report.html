@@ -9,10 +9,24 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">All Test Suite</th></tr>
-<tr><td><a href="#t0">/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5,238</td><td></td><td></td></tr>
+<tr><td><a href="#t0">/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">4,429</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">All Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Runners.Run</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1679573017090</td><td rowspan="1">4885</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">All Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Runners.Run</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1679574227535</td><td rowspan="1">4076</td></tr></tbody>
 </table>
-<h2>/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium</h2><h3 id="m0">Runners.Run#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;User should be able to login with valid credentials&quot;</td><td>&quot;Optional[Web login]&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium</h2><h3 id="m0">Runners.Run#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;User should be able to login with valid credentials&quot;</td><td>&quot;Optional[Web login]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:51992/devtools/browser/6829bf46-cd2c-4c51-8d12-1708211264aa
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;13.1&apos;, java.version: &apos;11.0.13&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at StepDefinitions.Steps.setup(Steps.java:20)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
