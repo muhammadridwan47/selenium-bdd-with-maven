@@ -10,21 +10,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Steps {
     WebDriver driver;
 
-    // LifeCycle Testing
-//    @Before //before Scenario
-//    public void setup() {
-//        driver = wdm.create();
-////        ChromeOptions options = new ChromeOptions();
-////        driver = new ChromeDriver(options.addArguments("--remote-allow-origins=*"));
-////        driver = new ChromeDriver();
-//        System.out.println("Hello setup");
-//    }
 
     @Before
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "linuxchromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless";
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
     }
 
