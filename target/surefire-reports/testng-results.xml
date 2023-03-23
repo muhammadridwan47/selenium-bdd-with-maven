@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-23T19:32:25 WIB" name="All Test Suite" finished-at="2023-03-23T19:32:28 WIB" duration-ms="3616">
+  <suite started-at="2023-03-23T19:47:28 WIB" name="All Test Suite" finished-at="2023-03-23T19:47:32 WIB" duration-ms="3746">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@3c73951]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-03-23T19:32:25 WIB" name="/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium" finished-at="2023-03-23T19:32:28 WIB" duration-ms="3616">
+    <test started-at="2023-03-23T19:47:28 WIB" name="/Users/muhammadriduwan4747/Documents/learn-unit-test/maven-bdd-selenium" finished-at="2023-03-23T19:47:32 WIB" duration-ms="3746">
       <class name="Runners.Run">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runners.Run@3c73951]" started-at="2023-03-23T19:32:25 WIB" name="setUpClass" finished-at="2023-03-23T19:32:25 WIB" duration-ms="220" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runners.Run@3c73951]" started-at="2023-03-23T19:47:28 WIB" name="setUpClass" finished-at="2023-03-23T19:47:28 WIB" duration-ms="306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@3c73951]" started-at="2023-03-23T19:32:25 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-23T19:32:28 WIB" duration-ms="3353" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Run@3c73951]" started-at="2023-03-23T19:47:28 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-23T19:47:32 WIB" duration-ms="3388" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -97,7 +97,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
-Caused by: org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:52188/devtools/browser/3c8e1b90-9129-46fc-8d07-42b0a95cb831
+Caused by: org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:52595/devtools/browser/9b1d15d9-2c2f-4665-95c2-31a3fd8673d2
 Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.1', java.version: '11.0.13'
 Driver info: driver.version: ChromeDriver
@@ -117,7 +117,7 @@ at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:50)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.Run@3c73951]" started-at="2023-03-23T19:32:28 WIB" name="tearDownClass" finished-at="2023-03-23T19:32:28 WIB" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runners.Run@3c73951]" started-at="2023-03-23T19:47:32 WIB" name="tearDownClass" finished-at="2023-03-23T19:47:32 WIB" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
